@@ -1,66 +1,66 @@
-## Foundry
+# CoolerToken
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+CoolerToken is an ER20 Token built using solidity and the OpenZeppelin library. The Projects includes the code for the Smart Contract, A deploy Script and a set of tests written using the foundry framework.
 
-Foundry consists of:
+## Introduction
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+CoolerToken is an ERC20 token with basic functionalities such as minting an initial supply of tokens, transferring tokens, and handling allowances.
 
-## Documentation
+## Prerequisites
 
-https://book.getfoundry.sh/
+To work on this project, you need the following tools installed:
+- [Foundry](https://getfoundry.sh/) (for testing and deploying smart contracts)
 
-## Usage
+## Installation 
 
-### Build
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/DontMind-me/CoolerToken-ERC20
+   cd coolertoken
+   ```
+
+## Installs
+
+To interact with the contract, you will have to download the following packages.
+
+```
+forge install openzeppelin/openzeppelin-contracts@v5.0.2 --no-commit
+```
+
+```
+forge install cyfrin/foundry-devops@0.2.2 --no-commit
+```
+
+## Commands
+
+#### Build
 
 ```shell
 $ forge build
 ```
 
-### Test
+#### Test
 
 ```shell
 $ forge test
 ```
 
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
+#### Gas Snapshots
 
 ```shell
 $ forge snapshot
 ```
 
-### Anvil
+#### Anvil
 
 ```shell
 $ anvil
 ```
 
-### Deploy
+#### Deploy
 
 ```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
+$ forge create src/CoolerToken.sol:CoolerToken --rpc-url http://localhost:8545 --private-key $(DEFAULT_ANVIL_KEY) --broadcast
 ```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+------------------------------------
+## THANK YOU FOR VISITING MY PROJECT!!
